@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vue.js</title>
+</head>
+<body>
+  <style>
+     #app {
+      width: 100%;
+      margin-left: 40%;
+      border: black dashed 1px;
+      width: 200px;
+      padding: 20px 20px 20px 20px;
+    }
+    #text{
+      text-align: center;
+    }
+    #app div {
+      padding: 20px;
+      background-color: lightgreen;
+      font-weight: bold;
+    }
+  </style>
+
+  <h1 id="text">conditional visibility of div elements by V-SHOW</h1>
+  <div id="app">
+    <div v-show="showDiv" >Hi! my name is Naeem. I am a web developer!</div>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <script>
+    const app = Vue.createApp ({
+      data(){
+        return{
+          showDiv: true
+        }
+      }
+    })
+    app.mount('#app')
+  </script>
+</body>
+</html>
+

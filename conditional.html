@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vue.js</title>
+</head>
+<body>
+   
+    <div id="application">
+        <button v-on:click="lightOn = !lightOn">Switch light</button>
+    <h2 v-if="lightOn">Vue is Owesome</h2>
+    <h2 v-else>Oh Something wrong</h2>
+  
+    </div>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  
+  <script>
+  const app = Vue.createApp ({
+     data(){
+      return{
+      lightOn: true
+    }
+  }
+  })
+  app.mount('#application')
+  </script>
+
+</body>
+</html>

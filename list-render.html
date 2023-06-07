@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vue.js</title>
+</head>
+<body>
+   
+    <div id="list-render">
+        <ul>
+            <li v-for="list in product">{{ list }}</li>
+        </ul>
+    </div>
+
+    <!--<div>
+        <img v-for="x in manyFoods" v-bind:src="x">   //for create image 
+      </div>
+    ........................................................................................
+    
+    [for image and list-name]
+      <div id="app">
+  <div>
+    <figure v-for="x in manyFoods">
+      <img v-bind:src="x.url">
+      <figcaption>{{ x.name }}</figcaption>
+    </figure>
+  </div>
+  
+
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<script>
+  const app = Vue.createApp({
+   data() {
+    return {
+      manyFoods: [
+        {name: 'Burrito', url: 'img_burrito.svg'},
+        {name: 'Salad', url: 'img_salad.svg'},
+        {name: 'Cake', url: 'img_cake.svg'},
+        {name: 'Soup', url: 'img_soup.svg'},
+        {name: 'Fish', url: 'img_fish.svg'},
+        {name: 'Pizza', url: 'img_pizza.svg'},
+        {name: 'Rice', url: 'img_rice.svg'}
+      ]
+    }
+   }
+  })
+  
+  app.mount('#app')
+
+</script>
+    -->
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  
+  <script>
+  const app = Vue.createApp ({
+     data(){
+      return{
+      product: [
+        'apple',
+        'banana',
+        'tomamto',
+        'orange'
+      ]
+    }
+  }
+  })
+  app.mount('#list-render')
+  </script>
+
+</body>
+</html>
